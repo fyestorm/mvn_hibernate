@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.humanbooster.hibernate.business.Article;
 import com.humanbooster.hibernate.dao.ArticleDao;
 import com.humanbooster.hibernate.dao.impl.ArticleDaoImpl;
-import com.humanbooster.hibernate.service.ArticleService;
-import com.humanbooster.hibernate.service.impl.ArticleServiceImpl;
 
 /**
  * Servlet implementation class ArticleServlet
@@ -39,8 +37,9 @@ public class ArticleServlet extends HttpServlet {
 		int idArticle = Integer.valueOf(request.getParameter("id"));
 		Article article = articleDao.findById(idArticle);
 		request.setAttribute("article", article);
-		request.getRequestDispatcher("article.jsp").include(request, response);
 		articleDao.closeCurrentSessionWithTransaction();
+		request.getRequestDispatcher("article.jsp").include(request, response);
+		
 	}
 
 	/**
