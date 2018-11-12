@@ -4,19 +4,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Liste des Articles</title>
 </head>
 <body>
 	<h1>Liste des Articles</h1>
-	<br/>
+	<br />
+	<a href="Creation">Création</a>
+	<br />
 	<c:forEach var="article" items="${articles}">
 
-		<a href="Article?id=${article.idArticle }" style="text-decoration: none; color: rgb(109, 19, 59)"><p style ="font-size: 30px;">${article.designation} (${article.categorie.nom})
-		</p></a>
-		<br/>
+		<a href="Article?id=${article.idArticle }"
+			style="text-decoration: none; color: rgb(109, 19, 59); font-size: 30px;">${article.designation}
+			(${article.categorie.nom}) </a>
+		<br />
 	</c:forEach>
-	<br/>
+	<br />
 	<p>Nombre total d'article(s): ${articles.size()}</p>
 </body>
 </html>

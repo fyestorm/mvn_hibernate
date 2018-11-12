@@ -9,12 +9,10 @@
 </head>
 <body>
 	<h2>Article</h2>
+	<a href="index" style="text-decoration: none">Retour</a>
 	<p>Categorie : <c:out value="${article.categorie.nom}"/></p>
 	<p>Nom : <c:out value="${article.designation}"/></p>
 	<p>Nb Points : <c:out value="${article.nbPoints}"/></p>
 	<p>En stock : <c:out value="${article.stock}"/></p>
-
-	
-
 </body>
 </html>
