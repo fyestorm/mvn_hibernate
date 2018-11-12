@@ -56,4 +56,9 @@ public class ArticleDaoImpl implements ArticleDao {
 
 	}
 
+	public Article findById(int id) {	
+		//Article article32 = session.byId(Article.class).load(idArticle);
+		return (Article) session.createQuery("from Article where idArticle = :id").setParameter("id", id).getSingleResult();
+	}
+
 }

@@ -11,10 +11,11 @@
 	<h1>Liste des Articles</h1>
 	<br/>
 	<c:forEach var="article" items="${articles}">
-		<h2>${article.designation} (${article.categorie.nom})
-		</h2>
+
+		<a href="Article?id=${article.idArticle }" style="text-decoration: none; color: rgb(109, 19, 59)"><p style ="font-size: 30px;">${article.designation} (${article.categorie.nom})
+		</p></a>
+		<br/>
 	</c:forEach>
-	<br/>
 	<br/>
 	<p>Nombre total d'article(s): ${articles.size()}</p>
 </body>

@@ -35,6 +35,12 @@ public class Article {
 		setNbPoints(nbPoints);
 		setStock(stock);
 	}
+	
+	public Article(String designation, int nbPoints, int stock) {
+		setDesignation(designation);
+		setNbPoints(nbPoints);
+		setStock(stock);
+	}
 
 	public int getIdArticle() {
 		return idArticle;
