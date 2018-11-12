@@ -10,7 +10,7 @@
 <body>
 	<h1>Liste des Articles</h1>
 	<br />
-	<a href="Creation">Création</a>
+	<a href="CreationArticle">Création</a>
 	<br />
 	<c:forEach var="article" items="${articles}">
 

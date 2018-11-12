@@ -61,4 +61,10 @@ public class ArticleDaoImpl implements ArticleDao {
 		return (Article) session.createQuery("from Article where idArticle = :id").setParameter("id", id).getSingleResult();
 	}
 
+	@Override
+	public Article create(Article article) {
+		session.save(article);
+		return article;
+	}
+
 }

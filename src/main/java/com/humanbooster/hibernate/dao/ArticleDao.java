@@ -19,4 +19,6 @@ public interface ArticleDao {
 	public void closeCurrentSession();
 
 	public void closeCurrentSessionWithTransaction();
+	
+	public Article create(Article article);
 }

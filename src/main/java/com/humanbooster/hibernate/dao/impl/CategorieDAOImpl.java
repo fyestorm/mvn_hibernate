@@ -10,6 +10,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import com.humanbooster.hibernate.business.Article;
 import com.humanbooster.hibernate.business.Categorie;
 import com.humanbooster.hibernate.dao.CategorieDAO;
 
@@ -56,5 +57,10 @@ public class CategorieDAOImpl implements CategorieDAO {
 
 			return sessionFactory;
 
+		}
+		
+		public Categorie findById(int id) {	
+			//Article article32 = session.byId(Article.class).load(idArticle);
+			return (Categorie) session.createQuery("from Categorie where idCategorie = :id").setParameter("id", id).getSingleResult();
 		}
 }

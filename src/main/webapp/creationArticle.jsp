@@ -8,14 +8,14 @@
 <title>Création d'article</title>
 </head>
 <body>
-	<form action="Creation" method="post">
+	<form action="CreationArticle" method="post">
 		Designation : <input type="text" name="designation" /> 
 		<br />
 
-		Catégories : <select name="dangerous">
-			<option value="aucune">aucune</option>
+		Catégories : <select name="categorie">
+				<option value="0">aucune</option>
 			<c:forEach items="${categories}" var="categorie">
-				<option value="${categorie.nom}">${categorie.nom}</option>
+				<option value="${categorie.idCategorie}">${categorie.nom}</option>
 			</c:forEach>
 		</select>
 		<br/>
