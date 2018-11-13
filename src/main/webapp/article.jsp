@@ -8,6 +8,7 @@
 <title>Article</title>
 </head>
 <body>
+<c:import url="header.jsp"></c:import>
 	<h2>Article</h2>
 	<a href="index" style="text-decoration: none">Retour</a>
 	<p>Categorie : <c:out value="${article.categorie.nom}"/></p>

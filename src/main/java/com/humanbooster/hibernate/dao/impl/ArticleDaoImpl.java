@@ -67,4 +67,9 @@ public class ArticleDaoImpl implements ArticleDao {
 		return article;
 	}
 
+	@Override
+	public List<Article> getArticlesByCategorie(int id) {
+		return session.createQuery("from Article where idCategorie = :id").setParameter("id", id).getResultList();
+	}
+
 }

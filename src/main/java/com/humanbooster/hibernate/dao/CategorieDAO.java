@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 
+import com.humanbooster.hibernate.business.Article;
 import com.humanbooster.hibernate.business.Categorie;
 
 public interface CategorieDAO {
@@ -19,6 +20,8 @@ public interface CategorieDAO {
 	public void closeCurrentSession();
 
 	public void closeCurrentSessionWithTransaction();
+	
+	public Categorie create(Categorie categorie);
 }
 
 

@@ -21,4 +21,6 @@ public interface ArticleDao {
 	public void closeCurrentSessionWithTransaction();
 	
 	public Article create(Article article);
+	
+	public List<Article> getArticlesByCategorie(int idCategorie);
 }

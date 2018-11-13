@@ -63,4 +63,11 @@ public class CategorieDAOImpl implements CategorieDAO {
 			//Article article32 = session.byId(Article.class).load(idArticle);
 			return (Categorie) session.createQuery("from Categorie where idCategorie = :id").setParameter("id", id).getSingleResult();
 		}
+
+		@Override
+		public Categorie create(Categorie categorie) {
+			// TODO Auto-generated method stub
+			session.save(categorie);
+			return categorie;
+		}
 }

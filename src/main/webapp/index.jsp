@@ -8,6 +8,7 @@
 <title>Liste des Articles</title>
 </head>
 <body>
+<c:import url="header.jsp"></c:import>
 	<h1>Liste des Articles</h1>
 	<br />
 	<a href="CreationArticle">Création</a>

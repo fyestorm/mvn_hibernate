@@ -8,6 +8,7 @@
 <title>Création d'article</title>
 </head>
 <body>
+<c:import url="header.jsp"></c:import>
 	<form action="CreationArticle" method="post">
 		Designation : <input type="text" name="designation" /> 
 		<br />
